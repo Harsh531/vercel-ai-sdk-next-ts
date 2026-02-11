@@ -1,5 +1,5 @@
-import React from 'react'
-import Navigations from './navigations'
+import Navigations from "./navigations";
+
 
 export default function Sidebar() {
   return (

@@ -14,7 +14,7 @@ export default function Navigations() {
             <div className="flex-1 flex flex-col  gap-2 px-0 py-0">
                 {
                     pages.map(pathData => (
-                        <Button key={pathData.path} variant={pathName === pathData.path ? "default" : "outline"} asChild>
+                        <Button key={pathData.path} variant={pathName === pathData.path ? "outline" : "ghost"} asChild>
                             <Link href={pathData.path} className="uppercase">{pathData.name}</Link>
                         </Button>
                     ))
