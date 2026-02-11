@@ -11,7 +11,7 @@ export function ScreamUIPage() {
 }
 
 export default function StreamPage() {
-    const { input, setInput, handleInputChange, handleSubmit, completion, isLoading, error } = useCompletion({
+    const { input, setInput, handleInputChange, handleSubmit, completion, isLoading, error, stop } = useCompletion({
         api: "/api/stream",
     });
 
@@ -52,7 +52,10 @@ export default function StreamPage() {
                         value={input}
                         onChange={handleInputChange}
                     />
-                    <button type="submit" disabled={isLoading} className="bg-blue-500 text-white px-4 py-2 rounded">Send</button>
+
+                    <button type="submit" disabled={isLoading} className="bg-blue-500 text-white px-4 py-2 rounded disabled:bg-blue-200">Send</button>
+                    <button disabled={!isLoading} onClick={stop} className="bg-red-500 text-white px-4 py-2 rounded disabled:bg-red-200">Stop</button>
+
                 </form>
             </div>
 

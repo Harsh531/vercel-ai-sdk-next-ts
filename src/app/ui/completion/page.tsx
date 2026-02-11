@@ -47,7 +47,7 @@ export default function CompletionPage() {
                 <div className="flex-1 flex flex-col max-h-[470vh] overflow-hidden">
 
                     <div className="flex p-4 border-b  border-gray-300">
-                        <h2 className="text-lg font-semibold">Generate Text</h2>
+                        <h2 className="text-lg font-semibold">Text Completion</h2>
                     </div>
 
                     <div className='flex-1 flex flex-col overflow-y-auto  bg-gray-50'>

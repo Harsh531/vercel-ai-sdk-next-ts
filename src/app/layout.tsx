@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import AppBar from "./components/appbar";
+import AppBar from "../components/appbar";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,13 +30,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col min-h-screen overflow-hidden">
           {/* AppBar would go here */}
           <AppBar />
 
-           <div className="flex-1 flex flex-col">
-              {children}
-           </div>
+          <main className="relative flex-1 flex flex-col max-h-[85vh] overflow-hidden">
+            {children}
+          </main>
+
+          <Footer />
         </div>
       </body>
     </html>
