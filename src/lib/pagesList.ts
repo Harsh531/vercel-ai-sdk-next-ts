@@ -1,0 +1,2 @@
+
+export const pages = [{name : "Home", path : "/"} , { name: "Text Generation", path: "/ui/completion", }, { name: "Text Streaming", path: "/ui/stream"}, { name: "Chat Message", path: "/ui/chat", }, { name: "Structured Response", path: "/ui/generate-object", }]
