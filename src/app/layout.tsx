@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AppBar from "./components/appbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +25,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex-1 flex flex-col">
+          {/* AppBar would go here */}
+          <AppBar />
+
+           <div className="flex-1 flex flex-col">
+              {children}
+           </div>
+        </div>
       </body>
     </html>
   );
