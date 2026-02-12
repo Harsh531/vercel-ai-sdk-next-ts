@@ -39,9 +39,9 @@ export default function RootLayout({
           </header>
 
           <main className="flex h-[90dvh] w-full ">
-            <aside className="flex flex-col h-full w-[20dvw] bg-transparent border-r border-t ">
+            {/* <aside className="flex flex-col h-full w-[20dvw] bg-transparent border-r border-t ">
               <Sidebar />
-            </aside>
+            </aside> */}
 
             <main className="flex flex-col h-full w-[80dvw]">
               <div className="relative flex flex-col h-[90dvh] w-full overflow-hidden bg-gray-100">

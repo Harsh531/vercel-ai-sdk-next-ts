@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navigations() {
     const pathName = usePathname();
+    
     return (
         <div className="flex gap-4 flex-1" >
 
