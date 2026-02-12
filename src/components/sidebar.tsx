@@ -1,4 +1,4 @@
-import Navigations from "./navigations";
+import Navigations from "@/components/navigations";
 
 
 

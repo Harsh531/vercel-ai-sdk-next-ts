@@ -1,5 +1,3 @@
-import Navigations from "./navigations";
-
 
 export default function AppBar() {
 
