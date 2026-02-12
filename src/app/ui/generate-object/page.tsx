@@ -1,10 +1,11 @@
 "use client";
 
+import { TRecipe } from "@/lib/types";
 import { useState } from "react";
 
 export default function GenerateObjectPage() {
   const [prompt, setPrompt] = useState(""); // user input
-  const [completion, setCompletion] = useState(null) // AI Response text
+  const [completion, setCompletion] = useState<TRecipe | null>(null) // AI Response text
   const [isLoading, setIsLoading] = useState(false) // loading
   const [error, setError] = useState<string | null>(null) // error
 
@@ -60,12 +61,12 @@ export default function GenerateObjectPage() {
             ) :
               completion ? (
                 <div className="flex flex-col px-4 py-2 gap-2">
-                  <h4 className="font-semibold">{completion.name}</h4>
+                  <h4 className="font-semibold">{completion?.name}</h4>
 
                   <div className="flex flex-col gap-2">
                     <h4 className="font-semibold">Ingredients:</h4>
                     <div className="flex items-center gap-2">
-                      {completion.ingredients.map((ingredient, index) => (
+                      {completion?.ingredients.map((ingredient, index) => (
                         <div key={index} className="border rounded-sm p-2">
                           <h4 className="font-semibold">{ingredient.name}</h4>
                           <p>{ingredient.amount}</p>
@@ -76,7 +77,7 @@ export default function GenerateObjectPage() {
 
                   <div className="flex flex-col gap-2">
                     <h4 className="font-semibold">Steps:</h4>
-                    {completion.steps.map((step, index) => (
+                    {completion?.steps.map((step, index) => (
                       <div key={index} className="flex items-center gap-2">
                         <h4>{index + 1}.</h4>
                         <p>{step}</p>

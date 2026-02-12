@@ -15,7 +15,7 @@ export default function Home() {
             list.map(pathData => (
               <div key={pathData.path} className="flex flex-col items-center justify-center h-56 p-4 border-2 border-gray-400 rounded-md text-black  transition-all ease-in-out  bg-white hover:text-green-400 hover:scale-105  " >
                 <Link href={pathData.path} className="uppercase font-semibold flex items-center justify-center gap-2 h-full w-full">
-                  <span className="flex items-center justify-center p-2 rounded-full shadow bg-gray-900 text-white">{pathData.icon}</span>
+                  <span className="flex items-center justify-center p-2 rounded-full border border-gray-800 text-inherit">{pathData.icon}</span>
                   {pathData.name}
                 </Link>
               </div>

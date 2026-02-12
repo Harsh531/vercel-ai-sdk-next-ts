@@ -1,13 +1,11 @@
+import { recipeSchema } from "@/lib/schema";
 import { google } from "@ai-sdk/google";
 import { generateObject } from "ai";
 import z from "zod";
 
-const schema = z.object({
-    recipe: z.object({
-        name: z.string(),
-        ingredients: z.array(z.object({ name: z.string(), amount: z.string() })),
-        steps: z.array(z.string()),
-    }),
+
+export const schema = z.object({
+    recipe: recipeSchema,
 })
 
 export async function POST(req: Request) {
