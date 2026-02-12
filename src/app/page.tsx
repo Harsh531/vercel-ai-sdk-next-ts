@@ -1,7 +1,12 @@
 import { pages } from "@/lib/pagesList";
 import { CaseUpper, MessageSquareText, Podcast } from "lucide-react";
-import Image from "next/image";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata : Metadata = {
+  title : "Home",
+  description : "Home page, list of all pages"
+}
 
 export default function Home() {
   const list = pages.map(pathData => ({ ...pathData, icon: <CaseUpper /> }));
