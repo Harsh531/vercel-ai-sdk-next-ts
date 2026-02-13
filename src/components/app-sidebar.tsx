@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sidebar"
 import { pages } from "@/lib/pagesList"
 import Link from "next/link"
+import AppLogo from "./app-logo"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     const { isMobile } = useSidebar();
@@ -29,9 +30,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                             className="data-[slot=sidebar-menu-button]:!p-1.5"
                         >
                             <div className="flex items-center justify-between gap-2">
-                                <a href="#">
+                                <AppLogo />
+                                {/* <a href="#">
                                     <span className="text-base font-semibold">Next.js / AI-SDK</span>
-                                </a>
+                                </a> */}
                                 {isMobile && <SidebarTrigger />}
                             </div>
 
